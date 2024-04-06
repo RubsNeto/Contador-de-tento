@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Documento HTML</title>
+</head>
+<body>
+    <div class="quadrado">
+        <h1>Contador de tento</h1>
+        <div class="jogadores">
+            <div class="jogador1">
+                <h2>Jogador 1</h2>
+                <h3 class="contador1" id="contador1">0</h3>
+                <button onclick="adicionar1()" class="mais1"  id = "mais1">+</button>
+                <button onclick="remover1()" class="menos1"  id = "menos1">-</button>
+            </div>
+
+            <div class="jogador2">
+                <h2>Jogador 2</h2>
+                <h3 class="contador2" id="contador2">0</h3>
+                <button onclick="adicionar2()" class="mais2" id = "mais2">+</button>
+                <button onclick="remover2()" class="menos2" id = "menos2">-</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+
+function adicionar1() {
+    let contador = document.getElementById("contador1");
+    let contador2 = document.getElementById("contador2");
+
+    if(parseInt(contador.textContent) <  11){
+        let valorAtual = parseInt(contador.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador.textContent = valorAtual + 1; // Incrementar o valor e atualizar o conteúdo do elemento
+    }
+
+    else if(parseInt(contador.textContent) ===  11){
+    
+        let valorAtual = parseInt(contador.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador.textContent = 0; // Incrementar o valor e atualizar o conteúdo do elemento
+
+
+        let valor2= parseInt(contador2.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador2.textContent = 0; // Incrementar o valor e atualizar o conteúdo do elemento
+
+
+        alert("Ganhoooou!!");
+    }
+}
+
+function adicionar2() {
+    let contador = document.getElementById("contador2");
+    let contador2 = document.getElementById("contador1");
+
+    if(parseInt(contador.textContent) <  11){
+        let valorAtual = parseInt(contador.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador.textContent = valorAtual + 1; // Incrementar o valor e atualizar o conteúdo do elemento
+    }
+
+    else if(parseInt(contador.textContent) ===  11){
+    
+        let valorAtual = parseInt(contador.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador.textContent = 0; // Incrementar o valor e atualizar o conteúdo do elemento
+
+
+        let valor2= parseInt(contador2.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador2.textContent = 0; // Incrementar o valor e atualizar o conteúdo do elemento
+
+
+        alert("Ganhoooou!!");
+    }
+}
+
+function remover1() {
+    let contador = document.getElementById("contador1");
+
+    if(parseInt(contador.textContent) >  0){
+        let valorAtual = parseInt(contador.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador.textContent = valorAtual - 1; // Incrementar o valor e atualizar o conteúdo do elemento
+    }
+}
+
+
+function remover2() {
+    let contador = document.getElementById("contador2");
+
+    if(parseInt(contador.textContent) >  0){
+        let valorAtual = parseInt(contador.textContent); // Obter o valor atual e convertê-lo para inteiro
+        contador.textContent = valorAtual - 1; // Incrementar o valor e atualizar o conteúdo do elemento
+    }
+}
+
+</script>
+</html>
